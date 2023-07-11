@@ -5,6 +5,8 @@
     <title>Free React Templates</title>
     <link rel="icon" type="image/x-icon" href="./assets/logo.svg">
     <link rel="stylesheet" href="./styles.css">
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
 </head>
 <body>
     <section id="top">
@@ -12,34 +14,55 @@
             NAVIGATION 
         -->
         <nav>
-            <div class="row nav__row">
+            <div class="nav__container">
 
-                <div class="nav__left">
+                <div class="row nav__row">
                     
-                    <a href="" class="nav__left--anchor">
-                        <figure class="logo">
-                            <img src="./assets/logo.svg" alt="">
-                        </figure>
-                        <span class="logo__title">Treact</span>
-                    </a>
-                </div>
-                <div class="nav__right">
-                    <div class="nav__right--list">
+                    <div class="nav__left">
                         
-                        <ul>
-                            <li><a href="" class="nav__right--link">About</a></li>
-                            <li><a href="" class="nav__right--link">Blog</a></li>
-                            <li><a href="" class="nav__right--link">Pricing</a></li>
-                            <li><a href="" class="nav__right--link">Contact Us</a></li>
-                        </ul>
+                        <a href="" class="nav__left--anchor">
+                            <figure class="logo">
+                                <img src="./assets/logo.svg" alt="">
+                            </figure>
+                            <span class="logo__title">Treact</span>
+                        </a>
                     </div>
-                    <div class="nav__right--button">
-                        <button class="btn login">Login</button>
-                        <button class="btn signup">Sign Up</button>
+                    <div class="nav__right">
+                        <div class="nav__right--list">
+                            
+                            <ul class="nav__ul">
+                                <li><a href="" class="nav__right--link nav__animate">About</a></li>
+                                <li><a href="" class="nav__right--link nav__animate">Blog</a></li>
+                                <li><a href="" class="nav__right--link nav__animate">Pricing</a></li>
+                                <li><a href="" class="nav__right--link nav__animate">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="nav__right--button">
+                            <button class="btn login nav__animate">Login</button>
+                            <button class="btn signup darker">Sign Up</button>
+                        </div>
+                        
+                        <!-- burger menu -->
+                        <button class="btn__menu" onclick="openMenu()">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                        <div class="btn__close">
+                            <button class="btn__menu btn__close--menu" onclick="closeMenu()">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <ul class="btn__menu--links">
+                                <li><a class="btn__menu--link" onclick="closeMenu()" href="#">About</a></li>
+                                <li><a class="btn__menu--link" onclick="closeMenu()" href="#">Blog</a></li>
+                                <li><a class="btn__menu--link" onclick="closeMenu()" href="#pricing">Pricing</a></li>
+                                <li><a class="btn__menu--link" onclick="closeMenu()" href="#contact">Contact Us</a></li>
+                                <li><a class="btn__menu--link" onclick="closeMenu()" href="#">Login</a></li>
+                                <button class="btn signup darker btn__close--signup">Sign Up</button>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+                
             </div>
-
         </nav>
         <!-- 
             HEADER 
@@ -55,7 +78,7 @@
                             </p>
                             <div class="header__input">
                                 <input class="email__input" type="text" placeholder="Your E-mail Address">
-                                <button class="btn signup btn__input">Get Started</button>
+                                <button class="btn signup darker btn__input">Get Started</button>
                             </div>
                             <div class="trusted__customers">
                                 <p class="header__para--two">OUR TRUSTED CUSTOMERS</p>
@@ -160,7 +183,7 @@ FEATURES
                     <p class="quality__left--para">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </p>
-                    <button class="btn signup">Learn More</button>
+                    <button class="btn signup darker">Learn More</button>
                 </div>
                 <div class="quality__right">
                     <img class="quality__right--img" src="./assets/body__image1.png" alt="">
@@ -214,7 +237,7 @@ FEATURES
         <div class="container">
             <div class="row values__row">
                 <div class="values__left">
-                    <p class="purple">VALUES</p>
+                    <p class="purple bolder">VALUES</p>
                     <h1 class="quality__left--title">We Always Abide by Our <span class="purple bolder">Principles.</span></h1>
                     <p class="quality__left--para">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
@@ -251,7 +274,7 @@ FEATURES
                             </p>
                         </div>
                     </div>
-                    <button class="btn signup">Learn More</button>
+                    <button class="btn signup darker">Learn More</button>
                 </div>
                 <div class="values__right">
                     <img class="values__right--img" src="./assets/body__image3.svg" alt="">
@@ -331,5 +354,196 @@ FEATURES
             </div>
         </div>
     </section>
+    <!-- 
+        TESTIMONIALS 
+    -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="row test__row">
+                <div class="test__left">
+                    <img src="./assets/body__image4.svg" alt="">
+                </div>
+                <div class="test__right">
+                    <p class="purple bolder">TESTIMONIALS</p>
+                    <h1 class="quality__left--title">Our Clients <span class="purple bolder">Love Us.</span></h1>
+                    <p class="quality__left--para">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna 
+                        aliqua enim ad minim veniam.
+                    </p>
+                    <div class="test__ratings">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="test__title">Amazing User Experience</h3>
+                    <p class="test__para">
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia. Lorem ipsum dolor sit amet, consectetur 
+                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                        nostrud exercitation ullamco.
+                    </p>
+                    <div class="test__person">
+                        <img class="test__person--img" src="./assets/charlotte.avif" alt="">
+                        <div class="test__person--details">
+                            <p class="test__person--name bolder">Charlotte Hale</p>
+                            <p class="test__person--position">Directors, Delos Inc.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 
+        CONTACT 
+    -->
+    <section id="contact">
+        <div class="container">
+            <div class="row contact__row">
+                <h3 class="contact__title">Developers all over the world are happily using Treact.</h3>
+                <div class="contact__btn">
+                    <button class="btn signup contact__btn--one bolder">Get Started</button>
+                    <button class="btn signup contact__btn--two bolder">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 
+        FOOTER 
+    -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer__contents">
+                    <div class="footer__content">
+                        <p class="footer__content--title bolder">MAIN</p>
+                        <ul>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">FaQs</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Support</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">About Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__content">
+                        <p class="footer__content--title bolder">PRODUCT</p>
+                        <ul>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Log In</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Personal</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Business</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Team</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__content">
+                        <p class="footer__content--title bolder">PRESS</p>
+                        <ul>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Logos</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Events</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Stories</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Office</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__content">
+                        <p class="footer__content--title bolder">TEAM</p>
+                        <ul>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Career</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Founders</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Culture</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">onboarding</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__content">
+                        <p class="footer__content--title bolder">LEGAL</p>
+                        <ul>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">GDPR</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Teams of Service</a>
+                            </li>
+                            <li>
+                                <a href="#" class="footer__content--anchor footer__content--body">Disclaimer</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__bottom--child">
+                        <div class="nav__left">
+                            
+                            <a href="" class="nav__left--anchor">
+                                <figure class="logo ">
+                                    <img src="./assets/footer__logo.svg" alt="">
+                                </figure>
+                                <span class="logo__title footer__title bolder">Treact Inc.</span>
+                            </a>
+                        </div>
+                    </div>    
+                    <div class="footer__bottom--child">
+
+                        <p class="copyright">
+                            &copy; 2018 Treact Inc. All Rights Reserved.
+                        </p>
+                    </div>
+                    <div class="footer__bottom--child">
+
+                        <div class="footer__links">
+                        
+                                <a href="https://www.facebook.com" class="footer__link footer__facebook" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                            
+                        
+                                <a href="https://www.twitter.com" class="footer__link" target="_blank">
+                                    <i class="fab fa-twitter fab__border"></i>
+                                </a>
+                            
+                        
+                                <a href="https://youtube.com" class="footer__link" target="_blank">
+                                    <i class="fab fa-youtube fab__border"></i>
+                                </a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
